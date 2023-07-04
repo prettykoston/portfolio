@@ -1,0 +1,16 @@
+.heading-default {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  @include respond(tab-landscape) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  @include respond(wide-phone) {
+    gap: 1rem;
+  }
+}

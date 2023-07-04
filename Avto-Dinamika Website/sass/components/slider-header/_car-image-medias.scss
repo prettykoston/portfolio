@@ -1,0 +1,126 @@
+.header-slider__car-image {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  max-width: 87.5rem;
+  right: 10rem;
+  bottom: 10rem;
+
+  align-self: self-end;
+  justify-self: self-end;
+  width: 40vw;
+
+  position: relative;
+
+  @include respond(desktop-medium) {
+    right: 14rem;
+    bottom: 14rem;
+  }
+
+  @include respond(desktop-small) {
+    width: 44vw;
+    right: 17rem;
+    bottom: 12rem;
+  }
+
+  @include respond(desktop-small) {
+    right: 18rem;
+    bottom: 12rem;
+  }
+
+  @include respond(tab-landscape) {
+    width: 68rem;
+    bottom: 6rem;
+    align-self: center;
+    right: 2rem;
+  }
+
+  @include respond(tab-portrait) {
+    width: 50rem;
+    bottom: 6rem;
+    right: 0;
+  }
+
+  @include respond(wide-phone) {
+    width: 40rem;
+    bottom: 3rem;
+  }
+
+  @include respond(phone) {
+    width: 100vw;
+    bottom: 5rem;
+  }
+
+  &--2 {
+    @include respond(desktop-wide) {
+      width: 66rem;
+      right: 3rem;
+      bottom: 2rem;
+    }
+
+    @include respond(desktop-medium) {
+      width: 35vw;
+      right: 11rem;
+      bottom: 9rem;
+    }
+
+    @include respond(tab-landscape) {
+      width: 52rem;
+      top: -3rem;
+      right: 0;
+    }
+
+    @include respond(tab-portrait) {
+      width: 40rem;
+      align-self: center;
+      right: 0;
+    }
+
+    @include respond(wide-phone) {
+      width: 38rem;
+    }
+
+    @include respond(phone) {
+      width: 90vw;
+      top: -7rem;
+    }
+  }
+
+  &--3 {
+    @include respond(desktop-wide) {
+      width: 66rem;
+      right: 3rem;
+      bottom: 2rem;
+    }
+
+    @include respond(desktop-medium) {
+      width: 35vw;
+      right: 10rem;
+      bottom: 12rem;
+    }
+
+    @include respond(desktop-small) {
+      width: 42vw;
+      right: 15rem;
+      bottom: 7rem;
+    }
+
+    @include respond(tab-landscape) {
+      width: 44rem;
+      top: -3rem;
+      right: 0;
+    }
+
+    @include respond(tab-portrait) {
+      width: 33rem;
+    }
+
+    @include respond(wide-phone) {
+      width: 30rem;
+    }
+
+    @include respond(phone) {
+      width: 70vw;
+      top: -4rem;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.menu-new-auto {
+  display: flex;
+  position: absolute;
+  height: 0;
+  margin: 0 auto;
+  top: 6.8rem;
+  width: 75vw;
+  overflow: hidden;
+  transition: height 0.2s ease-out, opacity 0.2s ease-out;
+
+  border: 1px solid var(--clr-grey-light, rgb(199, 199, 199));
+  border-radius: 4px;
+  background-color: var(--clr-white);
+
+  z-index: 100;
+
+  &--active {
+    height: 116rem;
+  }
+
+  @include respond(desktop-small) {
+    display: none;
+  }
+
+  // Grids styles
+
+  &__brands,
+  &__car-body-type,
+  &__country {
+    position: relative;
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 1.5rem;
+
+    h3 {
+      grid-column: 1 / -1;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__brands,
+  &__car-body-type {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid var(--clr-grey-light, rgb(199, 199, 199));
+      bottom: 3rem;
+    }
+  }
+
+  &__brands,
+  &__country {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__car-body-type {
+    grid-template-columns: repeat(4, max-content);
+    margin-bottom: 6.1rem;
+
+    &::after {
+      bottom: -3rem;
+    }
+  }
+
+  &__menu {
+    padding: 4rem 3rem;
+  }
+
+  // Icons styles
+
+  &__brands-icon,
+  &__body-type-icon,
+  &__country-icon {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid var(--clr-grey-light, rgb(199, 199, 199));
+    border-radius: 4px;
+    box-shadow: 6px 6px 14px 0px rgba(188, 188, 188, 0.25);
+
+    span {
+      color: var(--clr-grey-default);
+    }
+  }
+
+  &__brands-icon {
+    justify-content: center;
+    padding: 1rem 3.5rem;
+
+    img {
+      width: 5.6rem;
+    }
+  }
+
+  &__body-type-icon {
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    font-size: var(--font-size-small-2);
+  }
+
+  &__country-icon {
+    gap: 1.5rem;
+    padding: 1rem 3rem 1rem 1rem;
+  }
+
+  // Sidebar
+
+  &__sidebar {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    padding: 4rem 3rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-right: 1px solid var(--clr-grey-light, rgb(199, 199, 199));
+      height: 100%;
+      right: 1rem;
+      top: 1rem;
+    }
+
+    a {
+      font-size: var(--font-size-default);
+
+      &:link {
+        color: var(--clr-grey-default, rgb(66, 66, 66));
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: var(--clr-grey-default, rgb(66, 66, 66));
+        text-decoration: none;
+      }
+      &:hover {
+        color: var(--clr-red-default);
+      }
+    }
+
+    button {
+      height: 6rem;
+      width: 90%;
+    }
+  }
+}
+
+// Better selector priority
+
+.menu-new-auto__brands > button {
+  height: 4rem;
+  width: 20rem;
+  background-color: var(--clr-black);
+  font-weight: 700;
+
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}

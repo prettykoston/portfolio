@@ -1,0 +1,36 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../node_modules/swiper/modules/pagination/pagination.scss";
+
+@import "base/animations";
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+@import "components/heading/heading-default";
+@import "components/menu/heading/menu-new-auto";
+@import "components/slider-header/header-slider";
+@import "components/slider-header/car-image-medias";
+@import "components/slider-specials/slider_specials";
+@import "components/brands-icons-grid/brands-icons-grid.scss";
+@import "components/car-filter-form/car-filter-form";
+@import "components/buttons/button-default";
+@import "components/user-selects/user-selects";
+@import "components/credit-calc/credit-calc";
+@import "components/request-cta/request-cta";
+@import "components/benefits/benefit-tickets";
+@import "components/benefits/benefit-gallery";
+@import "components/partners-list/partners-list";
+@import "components/news-card/news-card";
+@import "components/maps/down-map";
+
+@import "layouts/header";
+@import "layouts/section-brands-icons";
+@import "layouts/cta";
+@import "layouts/section-credit";
+@import "layouts/section-partners";
+@import "layouts/section-news";
+@import "layouts/footer";

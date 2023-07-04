@@ -1,0 +1,360 @@
+.credit-calc-wrapper {
+  padding: 4rem 3.5rem 5rem 3.5rem;
+  border: 1px solid var(--clr-grey-light, rgb(199, 199, 199));
+  box-shadow: 10px 10px 24px 0px rgba(188, 188, 188, 0.25);
+
+  margin-bottom: 8rem;
+
+  @include respond(wide-phone) {
+    padding: 0;
+  }
+}
+
+.credit-calc {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+
+  @include respond(desktop-small) {
+    gap: 3rem;
+  }
+
+  @include respond(tab-landscape) {
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__total-info-container {
+    background-color: var(--clr-black);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+}
+
+.credit-calc-user-form {
+  display: flex;
+  flex-direction: column;
+
+  @include respond(wide-phone) {
+    padding: 2rem 0.5rem 2.5rem 0.5rem;
+  }
+
+  &__brand-model-choose {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+
+    @include respond(wide-phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__color-heading {
+    margin-bottom: 1rem;
+
+    @include respond(wide-phone) {
+      text-align: center;
+    }
+  }
+
+  &__brand-select,
+  &__model-select,
+  &__equipment-select {
+    border: 1px solid var(--clr-grey-dark, rgb(33, 33, 33));
+    border-radius: 4px;
+
+    &:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__color {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    margin-bottom: 3rem;
+
+    @include respond(wide-phone) {
+      gap: 0.5rem;
+      margin: 0 auto 3rem auto;
+    }
+  }
+
+  &__price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    @include respond(wide-phone) {
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__footnote {
+    margin-bottom: 2rem;
+  }
+
+  &__trade-in-checkbox {
+    margin-bottom: 2.2rem;
+  }
+
+  &__initial-fee-heading {
+    margin-bottom: 1rem;
+  }
+
+  &__initial-fee {
+    width: 100%;
+  }
+
+  &__initial-fee-heading,
+  &__credit-term-heading {
+    @include respond(tab-landscape) {
+      width: max-content;
+      margin: 2rem auto;
+    }
+  }
+
+  &__credit-term-heading {
+    margin: 2rem auto 0 auto;
+
+    @include respond(wide-phone) {
+      margin: 2rem auto;
+    }
+  }
+}
+
+.initial-fee {
+  &__inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    gap: 2rem;
+
+    @include respond(tab-landscape) {
+      justify-content: center;
+    }
+
+    @include respond(wide-phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__total,
+  &__percentage,
+  &__term {
+    position: relative;
+
+    @include respond(wide-phone) {
+      width: 80%;
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--clr-grey-dark, rgb(33, 33, 33));
+
+      padding: 2rem 2.5rem;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &[type="number"] {
+        appearance: none;
+        -moz-appearance: textfield;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: 2rem;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      font-weight: 700;
+    }
+  }
+
+  &__percentage {
+    &::after {
+      content: "%";
+    }
+  }
+
+  &__total {
+    &::after {
+      content: "руб.";
+      font-weight: 500;
+
+      @include respond(wide-phone) {
+        right: 0;
+      }
+    }
+  }
+
+  &__term {
+    display: none;
+
+    &::after {
+      content: "мес.";
+      right: 0;
+    }
+    @include respond(wide-phone) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__percentage-slider,
+  &__credit-term-slider {
+    position: relative;
+
+    @include respond(tab-landscape) {
+      width: 44rem;
+      margin: 0 auto;
+    }
+
+    @include respond(tab-portrait) {
+      width: 32rem;
+    }
+
+    @include respond(wide-phone) {
+      width: 25rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    &-max-label {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 3px 4px;
+      background-color: var(--clr-white);
+      border-radius: 6px;
+      border: 1px solid var(--clr-grey-light, rgb(199, 199, 199));
+      font-size: var(--font-size-small-4);
+
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      background-image: url(/img/credit-calc/credit-term-underlines.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 50rem;
+      height: 1.5rem;
+      position: absolute;
+      top: 5rem;
+      left: 0.4rem;
+
+      @include respond(desktop-medium) {
+        width: 44rem;
+      }
+
+      @include respond(desktop-small) {
+        width: 32rem;
+      }
+
+      @include respond(tab-landscape) {
+        width: 44rem;
+      }
+
+      @include respond(tab-portrait) {
+        width: 32rem;
+      }
+
+      @include respond(wide-phone) {
+        width: 25rem;
+      }
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__percentage-slider {
+    margin-bottom: 2.5rem;
+
+    &::after {
+      background-image: url(/img/credit-calc/initial-fee-underlines.png);
+      height: 2rem;
+      top: 5rem;
+      left: 0;
+    }
+  }
+
+  &__credit-term-slider {
+    &::after {
+      background-image: url(/img/credit-calc/credit-term-underlines.png);
+      height: 1.5rem;
+      top: 5rem;
+      left: 0.4rem;
+    }
+  }
+}
+
+.credit-calc-info {
+  &__car-info {
+    display: grid;
+    grid-template-columns: minmax(15rem, max-content) 1fr;
+    grid-template-rows: repeat(6, min-content);
+    column-gap: 2rem;
+
+    position: relative;
+    margin-bottom: 6.1rem;
+
+    @media screen and (max-width: 1630px) {
+      display: block;
+    }
+
+    img {
+      grid-row: 1 / -1;
+      grid-column: 1 / 1;
+      width: 100%;
+
+      @media screen and (max-width: 1630px) {
+        width: 10rem;
+        margin-right: 1rem;
+        float: left;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid var(--clr-white, rgb(255, 255, 255));
+      border-radius: 1px;
+
+      bottom: -3.1rem;
+    }
+  }
+
+  &__credit-info {
+    margin-bottom: 3rem;
+  }
+
+  &__button {
+    height: 6rem;
+    max-width: 70%;
+    margin-bottom: 1.5rem;
+  }
+
+  &__conditions-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,233 @@
+.header-slider {
+  margin: 0 auto;
+  width: 65%;
+
+  @include respond(desktop-small) {
+    width: 75%;
+  }
+
+  @include respond(tab-landscape) {
+    width: 100%;
+    height: 58rem;
+  }
+
+  @include respond(tab-portrait) {
+    height: 47rem;
+  }
+
+  @include respond(wide-phone) {
+    height: 43rem;
+  }
+
+  @include respond(phone) {
+    height: 35rem;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+  }
+
+  &__slide {
+    background: #fff;
+    display: grid;
+    grid-template-columns: 50rem 1fr;
+    grid-template-rows: repeat(2, 24rem);
+    row-gap: 2.5rem;
+    height: 100%;
+    position: relative;
+
+    @include respond(desktop-small) {
+      grid-template-rows: repeat(2, 19.5rem);
+    }
+
+    @media only screen and (max-width: 780px) {
+      justify-items: start;
+    }
+
+    @include respond(tab-landscape) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0;
+    }
+
+    &--2 {
+      @include respond(tab-landscape) {
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+
+    z-index: 2;
+
+    @include respond(tab-landscape) {
+      display: block;
+      align-self: center;
+    }
+
+    span {
+      margin-top: -1rem;
+    }
+
+    h2 {
+      margin-top: -1.5rem;
+    }
+
+    &--2 {
+      @include respond(tab-landscape) {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      h4 {
+        max-width: 75%;
+        margin-bottom: 2rem;
+
+        @include respond(tab-landscape) {
+          max-width: 80%;
+        }
+
+        @include respond(tab-portrait) {
+          margin-bottom: 0;
+          line-height: 1.3;
+        }
+      }
+    }
+
+    &--3 {
+      @include respond(desktop-small) {
+        display: flex;
+        gap: 1rem;
+      }
+
+      @include respond(tab-landscape) {
+        align-items: center;
+      }
+
+      span {
+        @include respond(desktop-small) {
+          max-width: 70%;
+        }
+      }
+
+      h4 {
+        max-width: 75%;
+        margin-bottom: 2rem;
+
+        @include respond(tab-landscape) {
+          max-width: 80%;
+        }
+
+        @include respond(tab-portrait) {
+          margin-bottom: 0;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+
+  &__conditions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    z-index: 2;
+    align-self: self-start;
+
+    @include respond(tab-landscape) {
+      align-self: center;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(wide-phone);
+  }
+
+  &__conditions-wrapper {
+    width: 36rem;
+    height: 3.5rem;
+    display: flex;
+    gap: 1px;
+
+    @include respond(tab-landscape) {
+      width: 28rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    &--2 {
+      @include respond(tab-landscape) {
+        width: 30rem;
+      }
+    }
+
+    &--3 {
+      @include respond(tab-landscape) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__condition {
+    background-color: var(--clr-black);
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-landscape) {
+      padding: 0 0.5rem;
+      justify-content: space-around;
+    }
+
+    &--kasko,
+    &--two-papers,
+    &--warranty {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    &--installment,
+    &--for-free,
+    &--noise-cancelling {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    &--installment,
+    &--warranty {
+      width: calc(100% / 3);
+    }
+
+    &--credit {
+      width: calc((100% / 3) + 30px);
+    }
+
+    &--two-papers {
+      width: calc((100% / 2) + 30px);
+    }
+
+    &--noise-cancelling {
+      width: calc(100% / 2);
+    }
+  }
+
+  &__pagination {
+    @include respond(tab-portrait) {
+    }
+  }
+}

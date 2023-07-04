@@ -1,0 +1,14 @@
+.button-default {
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  align-items: center;
+  outline: none;
+  backface-visibility: hidden;
+  background-color: var(--clr-red-default);
+  color: var(--clr-white);
+
+  &:hover {
+    background-color: var(--clr-red-dark-1);
+  }
+}

@@ -1,0 +1,174 @@
+.cta {
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/header/car-filter-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 3rem;
+
+    @include respond(tab-landscape) {
+      padding: 4rem 2rem;
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+
+      @include respond(tab-landscape) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__heading {
+    @include respond(wide-phone) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__additional-text {
+    margin-bottom: 3rem;
+  }
+
+  &__conditions-checkbox {
+    display: flex;
+    gap: 1rem;
+    width: 37.6rem;
+    margin-left: auto;
+
+    @include respond(tab-landscape) {
+      margin: 0 auto;
+      width: 60%;
+    }
+
+    @include respond(wide-phone) {
+      width: 100%;
+    }
+  }
+}
+
+.brand-select-container,
+.model-select-container,
+.name-input-container,
+.mail-input-container,
+.phone-number-container,
+.equipment-select-container,
+.cta__button {
+  flex: 1 1 16rem;
+  height: 6rem;
+
+  @include respond(tab-landscape) {
+    flex: 1 1 6rem;
+  }
+}
+
+.cta__button {
+  @include respond(tab-landscape) {
+    width: 60%;
+  }
+
+  @include respond(wide-phone) {
+    width: 100%;
+  }
+}
+
+.name-input-container,
+.mail-input-container,
+.phone-number-input-container,
+.brand-select-container,
+.model-select-container,
+.equipment-select-container {
+  position: relative;
+
+  @include respond(tab-landscape) {
+    width: 100%;
+  }
+
+  @include respond(tab-portrait) {
+    height: 5rem;
+  }
+}
+
+.brand-select-container,
+.model-select-container,
+.equipment-select-container {
+  &::after {
+    content: url("/img/header/car-filter-select-arrow.svg");
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 9%;
+    pointer-events: none;
+  }
+}
+
+.brand-selection,
+.model-selection,
+.equipment-selection,
+.name-input,
+.tel-input,
+.mail-input,
+.car-filter__min-price,
+.car-filter__max-price {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--clr-white);
+  padding: 0 2rem;
+
+  @include respond(wide-phone) {
+    padding: 0 0.5rem;
+  }
+
+  @include respond (phone) {
+    text-align: center;
+  }
+}
+
+.brand-text {
+  left: 3.5rem;
+}
+
+.model-text {
+  left: 4rem;
+}
+
+.name-text {
+  left: 5rem;
+}
+
+.tel-text {
+  left: 7rem;
+}
+
+.equipment-text {
+  left: 6.5rem;
+}
+
+.mail-text {
+  left: 5.5rem;
+}
+
+.brand-text,
+.model-text,
+.name-text,
+.tel-text,
+.equipment-text,
+.mail-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+
+  @include respond(phone) {
+    left: 50%;
+  }
+}

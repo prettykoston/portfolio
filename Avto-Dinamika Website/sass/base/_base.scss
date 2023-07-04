@@ -1,0 +1,23 @@
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+.main-wrapper {
+  width: 65%;
+  margin: 0 auto;
+
+
+  @include respond(desktop-small) {
+    width: 75%;
+  }
+
+  @include respond(wide-phone) {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+/* 
+* {
+  border: 2px solid red;
+} */

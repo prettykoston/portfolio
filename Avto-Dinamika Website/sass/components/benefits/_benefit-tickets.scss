@@ -1,0 +1,40 @@
+.benefit-tickets {
+  &__container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 10rem;
+
+    @include respond(desktop-small) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond (wide-phone) {
+      grid-template-columns: 1fr;
+
+    }
+  }
+
+  &__ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 21rem;
+    border: 1px solid var(--clr-light-grey, #c7c7c7);
+    border-radius: 4px;
+    padding: 1.5rem 2rem 2.5rem 1.5rem;
+    box-shadow: 10px 10px 24px 0px rgba(188, 188, 188, 0.25);
+
+    @include respond(desktop-small) {
+      align-items: center;
+      text-align: center;
+    }
+
+    @include respond (wide-phone) {
+      justify-content: space-evenly;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+/* MEDIA QUERY MANAGER
+
+0    - 360px:      Phone
+360  - 480px:  Wide Phone
+480  - 640px:  Tablet Portrait Mode
+640  - 980px:  Tablet Landscape Mode
+980  - 1260px: Small Desktop;
+1260 - 1720px: Medium Desktop;
+1720px+      : Wide Desktop;
+
+ Breakpoint argument choices:
+- phone
+- wide-phone
+- tab-portrait
+- tab-landscape
+- desktop-small
+- desktop-medium
+- desktop-wide
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 22.5em) {
+      // < 360px
+      @content;
+    }
+  }
+  @if $breakpoint == wide-phone {
+    @media only screen and (max-width: 30em) {
+      // < 480px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 40em) {
+      // < 640px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    @media only screen and (max-width: 61.25em) {
+      // < 980px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-small {
+    @media only screen and (max-width: 78.75em) {
+      // < 1260px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-medium {
+    @media only screen and (max-width: 107.5em) {
+      // < 1720px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-wide {
+    @media only screen and (min-width: 107.5em) {
+      // > 1720px
+      @content;
+    }
+  }
+}
+
+@mixin brand-select-container {
+  height: 6rem;
+  position: relative;
+
+  @include respond(tab-landscape) {
+    width: 100%;
+  }
+
+  @include respond(tab-portrait) {
+    height: 5rem;
+  }
+
+  &::after {
+    content: url("/img/header/car-filter-select-arrow.svg");
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 9%;
+    pointer-events: none;
+  }
+}

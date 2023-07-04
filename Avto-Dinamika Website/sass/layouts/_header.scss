@@ -1,0 +1,258 @@
+.header {
+  &__top-banner {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--clr-black);
+  }
+
+  &__nav {
+    height: 7rem;
+    border-bottom: 1px solid rgba(226, 226, 226, 1);
+  }
+
+  &__slider {
+    height: 51rem;
+
+    @include respond(desktop-small) {
+      height: 42rem;
+    }
+
+    @include respond(tab-landscape) {
+      height: 58rem;
+    }
+
+    @include respond(tab-portrait) {
+      height: 47rem;
+    }
+
+    @include respond(wide-phone) {
+      height: 43rem;
+    }
+
+    @include respond(phone) {
+      height: 35rem;
+    }
+  }
+
+  &__car-filter {
+    height: 24rem;
+    background-image: url(/img/header/car-filter-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond(tab-landscape) {
+      height: 52rem;
+    }
+  }
+}
+
+.header-top-banner-container {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include respond(tab-landscape) {
+    width: 46rem;
+  }
+
+  @include respond(wide-phone) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex: 1 1 100%;
+
+    @include respond(tab-landscape) {
+      justify-content: flex-end;
+    }
+
+    @include respond(tab-portrait) {
+      justify-content: space-between;
+    }
+
+    @include respond(wide-phone) {
+      justify-content: space-between;
+    }
+
+    @include respond(phone) {
+      justify-content: flex-end;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 5px;
+    white-space: nowrap;
+
+    &--1,
+    &--2 > span {
+      @include respond(tab-landscape) {
+        display: none;
+      }
+    }
+
+    &--2 {
+      align-items: center;
+      justify-content: space-between;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-nav-container {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 65%;
+  margin: 0 auto;
+
+  @include respond(desktop-small) {
+    width: 75%;
+  }
+
+  @include respond(tab-landscape) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  @include respond(wide-phone) {
+  }
+
+  &__navigation {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    transition: height 0.2s ease-out;
+    overflow-y: hidden;
+
+    @include respond(desktop-small) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+      position: absolute;
+
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      background-color: var(--clr-white);
+      height: 0;
+
+      @include respond(tab-landscape) {
+        padding: 0 8rem;
+      }
+
+      @include respond(wide-phone) {
+        padding: 0 4rem;
+      }
+
+      @include respond(phone) {
+        padding: 0 2rem;
+      }
+
+      &--active {
+        height: 42rem;
+
+        @include respond(tab-landscape) {
+          height: 56rem;
+        }
+
+        @include respond(tab-portrait) {
+          height: 47rem;
+        }
+
+        @include respond(wide-phone) {
+          height: 42rem;
+        }
+
+        @include respond(phone) {
+          height: 34rem;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include respond(desktop-small) {
+      &::before {
+        content: "";
+        position: absolute;
+      }
+    }
+    &--1 {
+      &::after {
+        right: -7%;
+      }
+    }
+
+    &--2 {
+      &::after {
+        right: -10%;
+      }
+    }
+
+    &--3 {
+      &::after {
+        right: -9%;
+      }
+    }
+
+    &--5 {
+      &::after {
+        right: -17%;
+      }
+    }
+
+    &--6 {
+      &::after {
+        right: -11%;
+      }
+    }
+
+    &--1,
+    &--2,
+    &--3,
+    &--5,
+    &--6 {
+      position: relative;
+      &::after {
+        content: url("/img/header/nav-list-arrow-down.svg");
+        position: absolute;
+        top: -8%;
+      }
+
+      @include respond(desktop-small) {
+        &::after {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &__mobile-hamburger-button {
+    display: none;
+    @include respond(desktop-small) {
+      display: block;
+    }
+  }
+}
