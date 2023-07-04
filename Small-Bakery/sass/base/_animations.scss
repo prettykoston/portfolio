@@ -1,0 +1,134 @@
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(10%);
+  }
+
+  66% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* PLANETARY ANIMATIONS */
+
+@keyframes croissant {
+  0% {
+    offset-distance: -10%;
+  }
+
+  100% {
+    offset-distance: 90%;
+  }
+}
+
+@keyframes cake--1 {
+  0% {
+    offset-distance: 10%;
+  }
+
+  100% {
+    offset-distance: 110%;
+  }
+}
+
+@keyframes cake--2 {
+  0% {
+    offset-distance: 50%;
+  }
+
+  100% {
+    offset-distance: 150%;
+  }
+}
+
+@keyframes bread {
+  0% {
+    offset-distance: 75%;
+  }
+
+  100% {
+    offset-distance: 175%;
+  }
+}
+
+@keyframes circle-middle {
+  0% {
+    offset-distance: 25%;
+  }
+
+  100% {
+    offset-distance: 125%;
+  }
+}
+
+@keyframes circle-small {
+  0% {
+    offset-distance: 75%;
+  }
+
+  100% {
+    offset-distance: 175%;
+  }
+}
+
+@keyframes macarons {
+  0% {
+    offset-distance: 25%;
+  }
+
+  100% {
+    offset-distance: 125%;
+  }
+}
+
+@keyframes star-small {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+@keyframes star-middle {
+  0% {
+    offset-distance: 50%;
+  }
+
+  100% {
+    offset-distance: 150%;
+  }
+}
+
+
+
+
+@keyframes production-gallery-text-1 {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}

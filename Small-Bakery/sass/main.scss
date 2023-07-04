@@ -1,0 +1,24 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/modules/navigation/navigation.scss";
+
+@import "base/animations";
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+@import "components/heading-animated";
+@import "components/rotating-star";
+@import "components/default-button";
+@import "components/slider-production-mobile";
+@import "components/map";
+
+@import "layouts/header";
+@import "layouts/section-founder";
+@import "layouts/section-production";
+@import "layouts/section-activities";
+@import "layouts/planetary-bakery";
+@import "layouts/section-book";
+@import "layouts/footer";

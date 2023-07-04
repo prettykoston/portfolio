@@ -1,0 +1,512 @@
+.planetary-bakery-container {
+  position: relative;
+
+  @include respond(phone) {
+    top: -70vw;
+  }
+
+  @include respond(narrow-phone) {
+    display: none;
+  }
+}
+
+.ellipse-middle-container,
+.ellipse-small-container {
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 70rem;
+  width: 100%;
+  position: absolute;
+}
+
+.ellipse-middle-container {
+  background-image: url("/images/section-planetary-bakery/ellipse-middle.svg");
+  top: -10rem;
+  right: 0.2rem;
+
+  @include respond(pre-wide-desktop) {
+    top: -17rem;
+    right: 0.2rem;
+  }
+
+  @include respond(tab-landscape) {
+    background-image: url("/images/section-planetary-bakery/ellipse-middle-tablet.svg");
+
+    top: -14rem;
+    right: 4.2rem;
+  }
+
+  @include respond(tab-portrait) {
+    background-image: url("/images/section-planetary-bakery/ellipse-middle-mobile.svg");
+
+    top: -21rem;
+    right: 4.2rem;
+  }
+}
+
+.ellipse-small-container {
+  background-image: url("/images/section-planetary-bakery/ellipse-small.svg");
+  top: -21rem;
+  right: 12rem;
+
+  @include respond(pre-wide-desktop) {
+    top: -28rem;
+    right: 12rem;
+  }
+
+  @include respond(tab-landscape) {
+    background-image: url("/images/section-planetary-bakery/ellipse-small-tablet.svg");
+
+    top: -23rem;
+    right: 12rem;
+  }
+
+  @include respond(tab-portrait) {
+    background-image: url("/images/section-planetary-bakery/ellipse-small-mobile.svg");
+
+    top: -15rem;
+    right: 0;
+  }
+}
+
+.planetary-bakery {
+  &__ellipse-middle,
+  &__ellipse-small,
+  &__croissant,
+  &__cake--1,
+  &__cake--2,
+  &__macarons,
+  &__star--small,
+  &__star--middle,
+  &__coffee,
+  &__circle--small,
+  &__circle--middle,
+  &__bread {
+    position: absolute;
+  }
+
+  &__croissant {
+    top: 0.7rem;
+    right: 78.7rem;
+    animation: croissant 23s linear infinite;
+    offset-rotate: auto 75deg;
+
+    z-index: 3;
+
+    @include respond(wide-desktop) {
+      top: 9.7rem;
+      right: 50.7rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 55.7rem;
+    }
+
+    @include respond(desktop) {
+      right: 78.7rem;
+    }
+
+    @include respond(tab-landscape) {
+      top: -1rem;
+      right: 68rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 19rem;
+      top: 9rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 25rem;
+      top: 6rem;
+    }
+
+    @include respond(phone) {
+      right: 33rem;
+      top: 2rem;
+    }
+  }
+
+  &__cake--1 {
+    top: 0.6rem;
+    right: 79.4rem;
+
+    animation: cake--1 15s linear infinite;
+
+    z-index: 3;
+
+    @include respond(wide-desktop) {
+      top: 9.6rem;
+      right: 50.4rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 56.4rem;
+    }
+
+    @include respond(desktop) {
+      right: 79.4rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 60.5rem;
+      top: -1rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 21rem;
+      top: 9rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 25rem;
+      top: 6rem;
+    }
+
+    @include respond(phone) {
+      right: 33rem;
+      top: 2rem;
+    }
+  }
+
+  &__cake--2 {
+    top: 0.6rem;
+    right: 79.4rem;
+
+    animation: cake--2 31s linear infinite;
+
+    z-index: 3;
+
+    @include respond(wide-desktop) {
+      top: 9.6rem;
+      right: 50.4rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 56.4rem;
+    }
+
+    @include respond(desktop) {
+      right: 79.4rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 65rem;
+      top: -1rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 14rem;
+      top: 9rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 19rem;
+      top: 6rem;
+    }
+    @include respond(phone) {
+      right: 27rem;
+      top: 2rem;
+    }
+  }
+
+  &__bread {
+    top: 0.6rem;
+    right: 79.4rem;
+
+    offset-rotate: 180deg;
+
+    animation: bread 38s linear infinite;
+
+    z-index: 3;
+
+    @include respond(wide-desktop) {
+      top: 9.6rem;
+      right: 50.4rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 56.4rem;
+    }
+
+    @include respond(desktop) {
+      right: 79.4rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 65rem;
+      top: -1rem;
+    }
+    @include respond(tab-portrait) {
+      right: 16rem;
+      top: 9rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 19rem;
+      top: 6rem;
+    }
+
+    @include respond(phone) {
+      right: 27rem;
+      top: 2rem;
+    }
+  }
+
+  &__circle--middle {
+    top: 0rem;
+    right: 89.4rem;
+
+    animation: circle-middle 50s linear infinite;
+    z-index: 2;
+
+    @include respond(wide-desktop) {
+      top: 8.6rem;
+      right: 55.4rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 63.4rem;
+      top: -2rem;
+    }
+
+    @include respond(desktop) {
+      right: 89.4rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 80.5rem;
+      top: -1rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 33rem;
+      top: 9rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 40rem;
+      top: 6rem;
+    }
+
+    @include respond(phone) {
+      right: 55rem;
+      top: 3rem;
+    }
+  }
+
+  /*    SMALL ORBIT    */
+
+  &__macarons,
+  &__star--small,
+  &__star--middle,
+  &__circle--small {
+    offset-path: path(
+      "M392.086 340.372C305.578 396.097 219.34 434.213 149.857 450.801C115.113 459.096 84.5863 462.001 60.3213 459.051C36.0524 456.101 18.1227 447.306 8.4407 432.276C-1.24133 417.245 -1.83526 397.284 5.51344 373.967C12.8609 350.654 28.1285 324.06 50.0469 295.855C93.8806 239.449 164.244 176.689 250.752 120.964C337.26 65.2384 423.498 27.1222 492.981 10.5341C527.725 2.23952 558.252 -0.665553 582.517 2.2841C606.785 5.23424 624.715 14.0288 634.397 29.0593C644.079 44.0897 644.673 64.0513 637.324 87.3683C629.977 110.681 614.709 137.275 592.791 165.48C548.957 221.887 478.594 284.647 392.086 340.372Z"
+    );
+    z-index: 4;
+
+    @include respond(tab-landscape) {
+      offset-path: path(
+        "M298.864 258.738C233.062 301.125 167.47 330.115 114.627 342.73C88.2039 349.039 64.996 351.246 46.5559 349.004C28.1119 346.762 14.5129 340.082 7.17424 328.689C-0.164391 317.296 -0.624006 302.152 4.96086 284.432C10.5446 266.715 22.1502 246.496 38.8197 225.046C72.1556 182.148 125.673 134.413 191.475 92.0258C257.277 49.6386 322.869 20.6486 375.712 8.03327C402.135 1.72503 425.343 -0.482051 443.783 1.75953C462.227 4.00158 475.826 10.682 483.165 22.0746C490.503 33.4671 490.963 48.6114 485.378 66.3319C479.794 84.0487 468.189 104.267 451.519 125.718C418.183 168.615 364.666 216.351 298.864 258.738Z"
+      );
+      transform: scale(0.75);
+      transform-origin: center;
+    }
+
+    @include respond(tab-portrait) {
+      offset-path: path(
+        "M129.397 112.543C100.873 130.917 72.4508 143.476 49.5679 148.939C38.1241 151.671 28.0935 152.622 20.1405 151.655C12.1835 150.688 6.38138 147.813 3.26178 142.97C0.142174 138.128 -0.0756753 131.656 2.3337 124.011C4.74191 116.37 9.75476 107.63 16.9741 98.3403C31.4099 79.764 54.5976 59.0782 83.121 40.7046C111.644 22.331 140.067 9.77155 162.95 4.3086C174.393 1.57657 184.424 0.626143 192.377 1.59292C200.334 2.56017 206.136 5.43432 209.256 10.2772C212.375 15.1201 212.593 21.5915 210.184 29.2363C207.776 36.8774 202.763 45.6174 195.543 54.9074C181.108 73.4837 157.92 94.1694 129.397 112.543Z"
+      );
+      transform: scale(0.4);
+      transform-origin: center;
+    }
+  }
+
+  &__macarons {
+    top: -9.4rem;
+    right: 59.4rem;
+    offset-rotate: auto 200deg;
+    animation: macarons 10s linear infinite;
+
+    @include respond(wide-desktop) {
+      top: 0.6rem;
+      right: 42.4rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 47.4rem;
+    }
+
+    @include respond(desktop) {
+      right: 59.4rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 49.4rem;
+      top: -5rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 10.4rem;
+      top: 5rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 14.4rem;
+      top: 3rem;
+    }
+
+    @include respond(phone) {
+      right: 14.4rem;
+      top: -4rem;
+    }
+  }
+
+  &__star--small {
+    top: -9.4rem;
+    right: 72rem;
+    animation: star-small 10s linear infinite;
+
+    @include respond(wide-desktop) {
+      top: -0.3rem;
+      right: 49.4rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 55rem;
+    }
+
+    @include respond(desktop) {
+      right: 72rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 63rem;
+      top: -7rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 25.4rem;
+      top: 4.8rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 30.4rem;
+      top: 2rem;
+    }
+
+    @include respond(phone) {
+      right: 39.4rem;
+      top: -2rem;
+    }
+  }
+
+  &__star--middle {
+    top: -9rem;
+    right: 71rem;
+    animation: star-middle 10s linear infinite;
+
+    @include respond(wide-desktop) {
+      top: 0rem;
+      right: 49rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 54rem;
+    }
+
+    @include respond(desktop) {
+      right: 71rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 59.5rem;
+      top: -8.5rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 22.4rem;
+      top: 4.2rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 28.4rem;
+      top: 2.2rem;
+    }
+
+    @include respond(phone) {
+      right: 36.4rem;
+      top: -1.8rem;
+    }
+  }
+
+  &__circle--small {
+    top: -10rem;
+    right: 73rem;
+    animation: circle-small 10s linear infinite;
+
+    @include respond(wide-desktop) {
+      top: -1rem;
+      right: 49.8rem;
+    }
+
+    @include respond(pre-wide-desktop) {
+      right: 55rem;
+    }
+
+    @include respond(desktop) {
+      right: 71rem;
+    }
+
+    @include respond(tab-landscape) {
+      right: 62rem;
+      top: -7.5rem;
+    }
+
+    @include respond(tab-portrait) {
+      right: 26.4rem;
+      top: 4.2rem;
+    }
+
+    @include respond(wide-phone) {
+      right: 31.4rem;
+      top: 2.2rem;
+    }
+
+    @include respond(phone) {
+      right: 41.4rem;
+      top: -1.8rem;
+    }
+  }
+
+  &__croissant,
+  &__cake--1,
+  &__cake--2,
+  &__bread,
+  &__circle--middle {
+    offset-path: path(
+      "M549.865 462.156C417.314 503.763 290.08 518.311 191.533 508.216C142.258 503.168 100.18 491.962 68.1995 474.916C36.2216 457.872 14.3697 435.009 5.46763 406.649C-3.43441 378.29 1.43145 347.04 17.9325 314.778C34.435 282.514 62.5602 249.271 100.111 216.969C175.211 152.366 287.935 91.5919 420.485 49.9847C553.035 8.37744 680.269 -6.17105 778.817 3.92442C828.092 8.97225 870.17 20.1788 902.15 37.2241C934.128 54.268 955.98 77.1314 964.882 105.491C973.784 133.851 968.918 165.101 952.417 197.362C935.915 229.626 907.789 262.869 870.239 295.172C795.139 359.775 682.415 420.548 549.865 462.156Z"
+    );
+
+    animation-duration: 30s;
+
+    @include respond(tab-landscape) {
+      offset-path: path(
+        "M418.099 351.641C317.274 383.29 220.498 394.354 145.549 386.676C108.073 382.837 76.0792 374.315 51.7682 361.357C27.4599 348.401 10.8633 331.029 4.10325 309.493C-2.65683 287.957 1.03474 264.217 13.5782 239.693C26.123 215.167 47.5072 189.889 76.0663 165.322C133.183 116.189 218.921 69.9621 319.746 38.3134C420.571 6.66468 517.347 -4.39977 592.297 3.27827C629.772 7.11738 661.766 15.6398 686.077 28.5973C710.386 41.5534 726.982 58.9252 733.742 80.4612C740.502 101.997 736.811 125.737 724.267 150.261C711.722 174.788 690.338 200.065 661.779 224.633C604.663 273.766 518.924 319.992 418.099 351.641Z"
+      );
+
+      transform: scale(0.85);
+      transform-origin: center;
+    }
+
+    @include respond(tab-portrait) {
+      offset-path: path(
+        "M181.855 153.041C138.148 166.76 96.2093 171.552 63.7452 168.226C47.5122 166.564 33.673 162.874 23.1703 157.276C12.6703 151.679 5.53545 144.194 2.63169 134.944C-0.272065 125.693 1.3054 115.474 6.72357 104.88C12.1431 94.2847 21.3909 83.3477 33.7615 72.7061C58.5014 51.4242 95.6555 31.3888 139.363 17.6693C183.07 3.94973 225.009 -0.842085 257.473 2.48363C273.706 4.14659 287.545 7.83663 298.048 13.4345C308.548 19.0308 315.682 26.5157 318.586 35.7663C321.49 45.017 319.913 55.2366 314.494 65.8296C309.075 76.4255 299.827 87.3624 287.456 98.004C262.717 119.286 225.562 139.321 181.855 153.041Z"
+      );
+
+      transform: scale(0.4);
+      transform-origin: center;
+    }
+  }
+}

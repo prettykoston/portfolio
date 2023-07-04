@@ -1,0 +1,25 @@
+body {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--crl-black);
+}
+
+h1 {
+  font-size: var(--font-size-large-2);
+  font-weight: 700;
+  text-align: left;
+  max-width: 95%;
+
+  padding-left: 4.5rem;
+
+  @include respond (tab-portrait) {
+    font-size: var(--font-size-large-3);
+  }
+}
+
+h4 {
+  font-size: var(--font-size-medium-1);
+  font-weight: 500;
+  line-height: 2.5rem;
+}

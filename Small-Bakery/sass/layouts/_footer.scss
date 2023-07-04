@@ -1,0 +1,98 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 4.9rem 2rem;
+
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    padding: 0 15px 4.9rem 15px;
+  }
+
+  @include respond(narrow-phone) {
+    padding: 0;
+  }
+
+  &__logo {
+    max-width: 15vw;
+
+    @include respond(phone) {
+      grid-row: 1 / -1;
+      grid-column: 1 / 1;
+      max-width: 40vw;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  &__phone-container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 0.8rem;
+
+    h5 {
+      @include respond(phone) {
+        font-weight: 400;
+      }
+    }
+
+    @include respond(tab-landscape) {
+      grid-template-columns: min-content 1fr;
+      column-gap: 0.5rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: min-content max-content;
+      column-gap: 12px;
+      font-size: 4vw;
+      text-align: center;
+    }
+
+    @include respond(narrow-phone) {
+      font-size: 3vw;
+      column-gap: 0;
+    }
+
+    img {
+      max-width: 5vw;
+      grid-column: 1 / 1;
+      grid-row: 1 / -1;
+
+      @include respond(phone) {
+        max-width: 8vw;
+      }
+    }
+  }
+
+  &__instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tab-landscape) {
+      font-size: var(--font-size-medium-4);
+    }
+    @include respond(phone) {
+      flex-direction: row;
+      gap: 20px;
+      font-size: 4vw;
+    }
+
+    @include respond(narrow-phone) {
+      font-size: 3vw;
+      column-gap: 0;
+    }
+
+    img {
+      max-width: 5vw;
+
+      @include respond(phone) {
+        max-width: 8vw;
+      }
+    }
+  }
+}

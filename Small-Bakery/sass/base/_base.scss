@@ -1,0 +1,43 @@
+html {
+  @include respond(wide-desktop) {
+    font-size: 100%; // 1rem =  16px, 16/16 = 100%
+  }
+
+  @include respond(pre-wide-desktop) {
+    font-size: 87.5%; // 1rem =  14px, 14/16 = 87.5%
+  }
+
+  @include respond(desktop) {
+    font-size: 62.5%; // 1rem = 10px // 1rem =  10px, 10/16 = 62.5%
+  }
+
+  @include respond(tab-landscape) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+  @include respond(tab-portrait) {
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(wide-phone) {
+    font-size: 40%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 30%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(narrow-phone) {
+    font-size: 20%; // 1rem = 8px, 8/16 = 50%
+    overflow-x: scroll;
+  }
+}
+
+body {
+  background-color: var(--clr-yellow-main);
+  transition: filter 0.4s ease-out;
+}
+
+.body--darkened > *:not(.navigation-mobile) {
+  background-color: var(--clr-yellow-main);
+  filter: brightness(0.4);
+}

@@ -1,0 +1,81 @@
+/* MEDIA QUERY MANAGER
+0 - 280px:           Narrow screen phone
+280 - 400px:         Normal Phone 
+400 - 600px:         Wide Phone
+600 - 900px:         Tablet Portrait Mode
+900 - 1200px:        Tablet Landscape Mode
+1200 - 1450px:       desktop(normal styles)
+1450 - 1620px:       pre-wide desktop;
+1620px + :           wide desktop;
+
+
+ Breakpoint argument choices:
+- phone
+- narrow-phone
+- wide-phone
+- tab-portrait
+- tab-landscape
+- pre-wide-desktop
+- wide-desktop
+
+
+
+ORDER: Base + Typography > general layout (header, footer, navigation, etc) + grid > page layout > components
+
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == narrow-phone {
+    @media only screen and (max-width: 17.5em) {
+      // < ~ 280px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 25em) {
+      // < ~ 400px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide-phone {
+    @media only screen and (max-width: 37.5em) {
+      // < ~ 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 60.3125em) {
+      // < ~ 965px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-landscape {
+    @media only screen and (max-width: 75em) {
+      // <  ~ 1200px
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 90.625em) {
+      // <  ~ 1450px
+      @content;
+    }
+  }
+
+  @if $breakpoint == pre-wide-desktop {
+    @media only screen and (max-width: 101.25em) {
+      // <  ~ 1620px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide-desktop {
+    @media only screen and (min-width: 101.25em) {
+      // >  ~ 1620px
+      @content;
+    }
+  }
+}

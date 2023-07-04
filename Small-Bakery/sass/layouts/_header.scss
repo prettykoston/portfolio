@@ -1,0 +1,261 @@
+.header {
+  padding: 4.6rem 4.5rem;
+  position: relative;
+  overflow-x: hidden;
+
+  &__logo {
+    width: 59.31%;
+    min-width: 65rem;
+    margin: 0 auto 16rem auto;
+
+    @include respond(tab-portrait) {
+      margin: 0 auto 7.8rem auto;
+    }
+
+    @include respond(wide-phone) {
+      min-width: 20rem;
+      width: 70vw;
+    }
+  }
+
+  &__breadlove-main-container {
+    position: relative;
+
+    margin-bottom: 7.5rem;
+
+    @include respond(tab-portrait) {
+      margin-bottom: 0;
+    }
+
+    @include respond(tab-portrait) {
+      padding: 0 15px;
+    }
+  }
+}
+
+.breadlove__writings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-large-1);
+    font-weight: 400;
+    text-transform: uppercase;
+    flex: 0 1 auto;
+
+    @include respond(pre-wide-desktop) {
+      font-size: var(--font-size-large-2);
+    }
+
+    @include respond(tab-portrait) {
+      font-size: 4vw;
+    }
+  }
+
+  &--menu-star {
+    position: relative;
+
+    a {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      font-family: var(--font-family-default);
+      font-size: 1.8vw;
+      font-weight: 700;
+      text-transform: capitalize;
+      color: var(--clr-white);
+      z-index: 1;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+}
+
+.rotating-star {
+  fill: #e41118;
+  height: 18vw;
+  @include respond(phone) {
+    stroke: #000;
+    stroke-width: 6;
+    fill: transparent;
+    max-width: 10vw;
+  }
+}
+
+.navigation-desktop {
+  margin-bottom: 16rem;
+  padding: 3.3rem 1.8rem 0 1.8rem;
+
+  @include respond(tab-portrait) {
+    margin-bottom: 12.4rem;
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-medium-2);
+  }
+}
+
+.header-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 7rem;
+
+  @include respond(tab-portrait) {
+    margin-bottom: 4.4rem;
+  }
+
+  &__img {
+    width: 33%;
+  }
+}
+
+.navigation-mobile {
+  position: relative;
+  &__background {
+    width: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -30vw;
+    background-color: var(--clr-yellow-main);
+    z-index: 6;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: all 0.5s ease-out;
+    backface-visibility: hidden;
+    height: 55vw;
+    max-height: 180px;
+
+    @include respond(narrow-phone) {
+      height: 60vw;
+      min-height: 130px;
+    }
+  }
+  //BUTTON
+  &__button {
+    position: fixed;
+    background-color: transparent;
+    height: 7rem;
+    width: 7rem;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__list {
+    position: absolute;
+
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: var(--font-size-large-4);
+      font-weight: 400;
+      padding: 1rem 2.5rem;
+      text-decoration: underline;
+
+      @include respond(narrow-phone) {
+        font-size: var(--font-size-large-3);
+      }
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .navigation-mobile__background {
+      top: 23vw;
+
+      @include respond(narrow-phone) {
+        top: 20vw;
+      }
+    }
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.4rem;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+
+      width: 15px;
+      height: 2px;
+      background-color: var(--clr-grey);
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      transition: all 0.35s;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

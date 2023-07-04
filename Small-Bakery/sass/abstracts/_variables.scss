@@ -1,0 +1,67 @@
+:root {
+  //COLORS
+  --crl-black: rgba(0, 0, 0, 1);
+  --clr-white: rgba(255, 255, 255, 1);
+  --clr-grey: rgba(51, 51, 51, 1);
+
+
+  --clr-red-main: rgba(228, 17, 24, 1);
+  --clr-yellow-main: rgba(255, 228, 0, 1);
+
+  //FONTS
+
+  --font-family-default: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  
+  --font-size-large-1: 6.4rem;
+  --font-size-large-2: 6rem;
+  --font-size-large-3: 3.5rem;
+  --font-size-large-4: 2.6rem;
+
+  
+  --font-size-medium-1: 2.4rem;
+  --font-size-medium-2: 2rem;
+  --font-size-medium-3: 1.7rem;
+  --font-size-medium-4: 1.6rem;
+
+
+  --font-size-small-1: 1.5rem;
+  
+
+}
+
+
+//COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: rgb(51, 51, 51);
+
+//FONT
+$default-font-size: 1.6rem;
+
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+
+$gutter-horizontal: 6rem;
+
+//LAYOUTS
+$border-radius-normal: .3rem;
+$border-radius-small: .2rem;

@@ -1,0 +1,14 @@
+.heading-reveal {
+  position: relative;
+  &--hidden {
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    position: absolute;
+    transform: translateY(200%);
+    opacity: 0;
+  }
+
+  &--active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
