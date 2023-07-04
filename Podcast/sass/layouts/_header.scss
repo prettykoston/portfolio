@@ -1,0 +1,278 @@
+.header {
+  height: 160rem;
+  position: relative;
+  margin-bottom: 14rem;
+
+  background-color: var(--clr-champagne-main);
+
+  @include respond(tab-landscape) {
+    height: 140rem;
+    margin-bottom: 8rem;
+  }
+
+  @include respond(wide-phone) {
+    height: 130rem;
+  }
+  @include respond(phone) {
+    height: 120rem;
+    margin-bottom: 0rem;
+  }
+
+  &__heading {
+    line-height: 9.6rem;
+
+    @include respond(tab-landscape) {
+      padding-top: 2rem;
+      line-height: 9rem;
+    }
+
+    @include respond(tab-portrait) {
+      padding-top: 1rem;
+      line-height: 8rem;
+    }
+
+    &--podcast {
+      color: var(--clr-red-main);
+    }
+  }
+
+  &__subscribe-btn-main {
+    @include big-button-default;
+
+    @include respond(tab-landscape) {
+      margin: 0 auto 5rem auto;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 6rem;
+    text-align: center;
+    color: var(--clr-grey-1);
+    font-weight: 500;
+    font-size: var(--font-size-medium-2);
+  }
+
+  &__supported-main {
+    position: relative;
+    width: 80.56%;
+    margin: 12rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+    align-items: center;
+
+    @include respond(tab-portrait) {
+      gap: 10%;
+    }
+
+    @include respond(phone) {
+      margin: 8rem auto 0 auto;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 0.15rem solid rgba(77, 77, 77, 1);
+    }
+
+    &::before {
+      top: -65%;
+
+      @include respond(tab-portrait) {
+        top: -60%;
+      }
+
+      @include respond(phone) {
+        top: -55%;
+      }
+    }
+
+    &::after {
+      top: 160%;
+      @include respond(tab-portrait) {
+        top: 150%;
+      }
+
+      @include respond(phone) {
+        top: 160%;
+      }
+    }
+
+    p {
+      font-size: var(--font-size-large-3);
+      font-weight: 700;
+      white-space: nowrap;
+
+      @include respond(tab-landscape) {
+        font-size: var(--font-size-medium-1);
+      }
+      @include respond(tab-landscape) {
+        font-size: var(--font-size-medium-2);
+      }
+    }
+  }
+
+  &__supported-img {
+    width: 15rem;
+
+    @include respond(tab-landscape) {
+      width: 13rem;
+    }
+
+    @include respond(tab-portrait) {
+      width: 10rem;
+    }
+
+    @include respond(wide-phone) {
+      width: 8rem;
+    }
+
+    &--spotify {
+      transform: translate(16%, -10%);
+    }
+
+    &--google {
+      transform: translate(-14%, -11%);
+    }
+
+    &--youtube {
+      transform: translate(-60%, -15%);
+    }
+  }
+
+  &__left-shape,
+  &__stars-shape {
+    position: absolute;
+
+    @include respond(tab-landscape) {
+      scale: 0.7;
+    }
+
+    @include respond(tab-portrait) {
+      scale: 0.45;
+    }
+  }
+
+  &__left-shape {
+    width: 32.6rem;
+    height: 59.3rem;
+    top: 5%;
+    left: 0;
+
+    @include respond(tab-landscape) {
+      left: -5rem;
+    }
+
+    @include respond(tab-portrait) {
+      left: -10rem;
+    }
+  }
+  &__stars-shape {
+    width: 15.6rem;
+    height: 21.7rem;
+    top: 16.3%;
+    right: 4%;
+
+    @include respond(tab-portrait) {
+      right: -1rem;
+    }
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 2.4rem;
+  margin-bottom: 6.4rem;
+  font-weight: 700;
+
+  @include respond(tab-landscape) {
+    margin-bottom: 3rem;
+  }
+
+  @include respond(wide-phone) {
+    margin-bottom: 1rem;
+  }
+
+  &__logo {
+    height: 7.4rem;
+    width: 7.4rem;
+    margin-left: 14rem;
+
+    @include respond(tab-landscape) {
+      margin-left: 8rem;
+    }
+    @include respond(tab-portrait) {
+      margin-left: 4rem;
+    }
+
+    @include respond(wide-phone) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    list-style: none;
+    font-size: var(--font-size-medium-2);
+    @include link-default-style;
+
+    @include respond(tab-landscape) {
+      gap: 5rem;
+    }
+
+    @include respond(tab-portrait) {
+      gap: 3rem;
+    }
+
+    @include respond(wide-phone) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__buttons {
+    margin-right: 14rem;
+    font-size: var(--font-size-medium-2);
+
+    @include respond(tab-landscape) {
+      margin-right: 8rem;
+    }
+
+    @include respond(tab-portrait) {
+      margin-right: 4rem;
+    }
+
+    @include respond(wide-phone) {
+      margin-right: 2rem;
+    }
+
+    &--recent {
+      margin-right: 2rem;
+
+      @include respond(wide-phone) {
+        margin-right: 1rem;
+      }
+
+      @include respond(phone) {
+        font-size: var(--font-size-medium-1);
+      }
+    }
+
+    &--subscribe {
+      background-color: var(--clr-black);
+      color: var(--clr-white);
+      box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.25);
+
+      @include respond(phone) {
+        font-size: var(--font-size-medium-1);
+      }
+    }
+  }
+}

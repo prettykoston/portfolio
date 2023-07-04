@@ -1,0 +1,221 @@
+.section-quote {
+  position: relative;
+  background-color: var(--clr-white);
+  margin-bottom: 14rem;
+
+  &__heading {
+    width: 55%;
+    margin: 0 auto 10rem auto;
+    line-height: 7.1rem;
+    letter-spacing: -0.11rem;
+
+    @include respond(phone) {
+      margin: 0 auto 3rem auto;
+      line-height: 5rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+
+    margin-bottom: 12rem;
+
+    @include respond(phone) {
+      gap: 7rem;
+      margin-bottom: 8rem;
+    }
+
+    &--right,
+    &--left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+
+      img {
+        width: 64%;
+        margin-bottom: 4rem;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  &__main-quote {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 36.6rem;
+    width: 82%;
+
+    margin: 0 auto;
+
+    gap: 3rem;
+    background-color: var(--clr-champagne-main);
+
+    @include respond(tab-landscape) {
+      gap: 2rem;
+    }
+
+    @include respond(tab-portrait) {
+      gap: 1rem;
+      width: 70%;
+    }
+  }
+
+  &__top-shape {
+    @include top-section-shape;
+
+    top: -10%;
+    @include respond(tab-landscape) {
+      top: -8%;
+    }
+
+    @include respond(tab-portrait) {
+      left: 45%;
+      top: -10%;
+    }
+
+    @include respond(phone) {
+      scale: 0.4;
+      left: 37%;
+      top: -9%;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.25;
+      left: 26%;
+      top: -17%;
+    }
+  }
+
+  &__left-shape {
+    position: absolute;
+    top: 15rem;
+    left: -7rem;
+
+    @include respond(tab-portrait) {
+      scale: 0.65;
+      left: -10rem;
+    }
+
+    @include respond(wide-phone) {
+      scale: 0.4;
+      left: -11rem;
+    }
+
+    @include respond(phone) {
+      scale: 0.3;
+      left: -14rem;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.2;
+      top: 9rem;
+      left: -20rem;
+    }
+  }
+
+  &__right-shape {
+    position: absolute;
+    top: -20%;
+    right: -7rem;
+
+    @include respond(tab-portrait) {
+      scale: 0.7;
+    }
+
+    @include respond(wide-phone) {
+      scale: 0.45;
+      top: -26%;
+      right: -10rem;
+    }
+
+    @include respond(phone) {
+      scale: 0.3;
+      top: -39%;
+      right: -14rem;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.2;
+      top: -64%;
+      right: -23rem;
+    }
+  }
+}
+
+.main-quote {
+  &__text {
+    font-size: var(--font-size-large-3);
+    font-weight: 700;
+    text-align: center;
+
+    width: 65%;
+
+    @include respond(tab-portrait) {
+      font-size: var(--font-size-medium-1);
+    }
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__portrait {
+    @include respond(phone) {
+      scale: 0.8;
+    }
+
+    @include respond(wide-phone) {
+      scale: 0.7;
+      margin-left: 2rem;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.6;
+    }
+  }
+
+  &__quote-mark {
+    @include respond(tab-portrait) {
+      scale: 0.8;
+    }
+
+    @include respond(phone) {
+      scale: 0.5;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.4;
+    }
+  }
+
+  &__job {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 0.7rem;
+
+    p {
+      font-weight: 700;
+    }
+
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.section-recent {
+  position: relative;
+
+  background-color: var(--clr-champagne-main);
+  padding-bottom: 14rem;
+
+  @include respond(phone) {
+    padding-bottom: 9rem;
+  }
+
+  &__recent-episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    gap: 2rem;
+    padding: 10rem 14rem;
+    margin: 0 auto;
+
+    @include respond(wide-phone) {
+      padding: 8rem 6rem;
+    }
+    @include respond(phone) {
+      padding: 6rem 5rem;
+    }
+
+    @include respond(narrow-phone) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &__button {
+    @include big-button-default;
+    margin: 0 auto;
+  }
+
+  &__top-shape {
+    @include top-section-shape;
+
+    @include respond(tab-portrait) {
+      top: -1%;
+      left: 46%;
+    }
+
+    @include respond(phone) {
+      scale: 0.4;
+      top: -4%;
+      left: 40%;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.25;
+      top: -8%;
+      left: 26%;
+    }
+  }
+
+  &__right-shape {
+    position: absolute;
+    top: 24rem;
+    right: 1rem;
+
+    @include respond(tab-landscape) {
+      scale: 0.7;
+      top: 16rem;
+      right: -1rem;
+    }
+
+    @include respond(tab-portrait) {
+      scale: 0.5;
+      top: 13rem;
+      right: -2rem;
+    }
+
+    @include respond(wide-phone) {
+      scale: 0.25;
+      top: 7rem;
+      right: -14rem;
+    }
+
+    @include respond(phone) {
+      scale: 0.2;
+      top: -3rem;
+      right: -20rem;
+    }
+
+    @include respond(narrow-phone) {
+      display: none;
+    }
+  }
+}

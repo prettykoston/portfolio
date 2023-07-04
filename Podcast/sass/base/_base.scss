@@ -1,0 +1,28 @@
+html {
+    font-size: 62.5% ;  // 1rem = 10px
+
+    @include respond(big-desktop) {
+      font-size: 75%; // 1rem =  12px, 12/16 = 75%
+    }
+  
+    @include respond(tab-landscape) {
+      font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+    }
+    @include respond(tab-portrait) {
+      font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+  
+    @include respond(wide-phone) {
+      font-size: 40%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone) {
+      font-size: 30%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(narrow-phone) {
+      font-size: 20%; // 1rem = 8px, 8/16 = 50%
+      overflow-x: scroll;
+
+    }
+}

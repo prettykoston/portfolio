@@ -1,0 +1,160 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+
+  padding: 14rem 14rem 8rem 14rem;
+
+  overflow-x: hidden;
+  @include respond(tab-portrait) {
+    padding: 6rem 9rem 6rem 7rem;
+    gap: 8rem;
+  }
+
+  @include respond(wide-phone) {
+    padding: 3rem 2rem;
+    gap: 4rem;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    p {
+      font-size: var(--font-size-small-1);
+      color: var(--clr-grey-1);
+      font-weight: 500;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 20rem;
+      gap: 4rem;
+
+      p {
+        color: var(--clr-grey-1);
+        font-size: var(--font-size-medium-3);
+        font-weight: 500;
+      }
+    }
+    &-img {
+      height: 7.4rem;
+      width: 7.4rem;
+    }
+
+    &-socials {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+
+      @include respond(wide-phone) {
+        transform-origin: left;
+        scale: 0.5;
+      }
+    }
+  }
+
+  &__nav-container {
+    display: flex;
+    gap: 9.3rem;
+    @include link-default-style;
+
+    @include respond(tab-landscape) {
+      gap: 4rem;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: var(--font-size-medium-2);
+        &:not(:last-of-type) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  &__socials-container {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    p {
+      color: var(--clr-grey-1);
+      font-size: var(--font-size-medium-2);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__right-socials {
+    display: flex;
+    align-items: center;
+    gap: 3.8rem;
+    margin-bottom: 4rem;
+
+    @include respond(tab-portrait) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @include respond(wide-phone) {
+      margin-bottom: 2rem;
+    }
+
+    img {
+      @include respond(tab-portrait) {
+        scale: 0.85;
+      }
+
+      @include respond(wide-phone) {
+        scale: 0.5;
+      }
+
+      @include respond(phone) {
+        scale: 0.4;
+      }
+    }
+  }
+
+  &__markets-logo {
+    @include respond(wide-phone) {
+      scale: 0.7;
+    }
+
+    @include respond(phone) {
+      scale: 0.5;
+    }
+  }
+
+  &__copyright {
+    font-size: var(--font-size-small-1);
+    color: var(--clr-grey-1);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+
+      width: 100%;
+      border-top: 0.5px solid rgb(77, 77, 77);
+    }
+  }
+}
+
+.copyright-links {
+  @include link-default-style;
+}

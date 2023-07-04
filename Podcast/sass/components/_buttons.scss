@@ -1,0 +1,27 @@
+
+.btn-small {
+  font-family: var(--font-family-default);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  background-color: transparent;
+  border: 0.2rem solid black;
+  border-radius: 0.8rem;
+  padding: 1rem 2rem;
+  margin-top: -1.4rem;
+
+  cursor: pointer;
+
+
+  @include respond(tab-portrait) {
+  padding: .7rem 1.2rem;
+  font-size: var(--font-size-medium-3)
+    
+  }
+
+  &:hover {
+    color: var(--clr-red-main);
+    cursor: pointer;
+  }
+}

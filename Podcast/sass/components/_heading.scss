@@ -1,0 +1,42 @@
+.heading {
+  padding-top: 14rem;
+
+  @include respond(tab-landscape) {
+    padding-top: 8rem;
+  }
+
+  h1,
+  h2 {
+    color: var(--clr-black);
+    text-align: center;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: var(--font-size-large-1);
+    margin-bottom: 0;
+
+    @include respond(wide-phone) {
+      font-size: var(--font-size-large-2);
+    }
+  }
+  h2 {
+    font-size: var(--font-size-large-2);
+
+    @include respond(tab-portrait) {
+      font-size: 4.4rem;
+
+    }
+
+    @include respond(phone) {
+      font-size: var(--font-size-large-3);
+    }
+  }
+
+  h5 {
+    font-size: var(--font-size-medium-1);
+    color: var(--clr-grey-1);
+    text-align: center;
+    font-weight: 500;
+  }
+}

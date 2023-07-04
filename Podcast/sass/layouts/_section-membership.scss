@@ -1,0 +1,114 @@
+.section-membership {
+  position: relative;
+
+  &__heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    position: relative;
+  }
+
+  &__benefits-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 10rem;
+
+    padding: 10rem 14rem;
+
+    @include respond(tab-landscape) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+      row-gap: 4rem;
+    }
+
+    @include respond(phone) {
+      padding: 3rem 12rem;
+      row-gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    h6 {
+      font-size: var(--font-size-medium-1);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__pricing-button {
+    @include big-button-default;
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__heading-shape {
+    position: absolute;
+
+    margin-right: -68rem;
+
+    @include respond(tab-landscape) {
+      scale: 0.7;
+      margin-top: -14rem;
+      margin-right: -64rem;
+    }
+
+    @include respond(tab-portrait) {
+      scale: 0.45;
+
+      margin-top: -4rem;
+      margin-right: -47rem;
+    }
+
+    @include respond(phone) {
+      scale: 0.35;
+      margin-top: -2rem;
+      margin-right: -39rem;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.25;
+    }
+  }
+
+  &__top-shape {
+    @include top-section-shape;
+    top: 2%;
+
+    @include respond(tab-landscape) {
+      top: -1%;
+    }
+    @include respond(tab-portrait) {
+      top: -3%;
+      left: 46%;
+    }
+
+    @include respond(phone) {
+      scale: 0.4;
+      top: -7%;
+      left: 42%;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.25;
+      top: -11%;
+      left: 24%;
+    }
+  }
+
+  .benefit {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

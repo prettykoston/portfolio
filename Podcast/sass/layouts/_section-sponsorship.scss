@@ -1,0 +1,84 @@
+.section-sponsorship {
+  position: relative;
+
+  &__plans {
+    padding: 10rem 5rem 14rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    position: relative;
+  }
+
+  &__heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    padding-top: 14rem;
+    position: relative;
+
+    @include respond (narrow-phone) {
+      padding-top: 7rem;
+    }
+  }
+
+  &__top-shape {
+    @include top-section-shape;
+
+    @include respond(tab-portrait) {
+      left: 46%;
+      top: -3%;
+    }
+
+    @include respond(phone) {
+      scale: 0.4;
+      left: 39%;
+      top: -7%;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.25;
+      left: 24%;
+      top: -17%;
+    }
+  }
+
+  &__left-shape {
+    position: absolute;
+    margin-right: 71rem;
+
+    transform: rotateY(180deg) scale(0.8);
+
+    @include respond(tab-landscape) {
+      scale: 0.8;
+      margin-right: 68rem;
+    }
+
+    @include respond(tab-portrait) {
+      scale: 0.6;
+      margin-right: 52rem;
+    }
+    @include respond(phone) {
+      scale: 0.4;
+      margin-right: 44rem;
+    }
+
+    @include respond(narrow-phone) {
+      display: none;
+    }
+  }
+
+  &__curly-shape,
+  &__star-shape {
+    position: absolute;
+    z-index: -1;
+  }
+  &__curly-shape {
+    top: 76%;
+    left: -5%;
+  }
+}

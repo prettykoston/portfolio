@@ -1,0 +1,95 @@
+.section-news {
+  position: relative;
+  &__heading {
+    padding-top: 14rem;
+
+    @include respond(wide-phone) {
+      padding-top: 8rem;
+    }
+    @include respond(phone) {
+      padding-top: 6rem;
+    }
+
+    @include respond(narrow-phone) {
+      padding-top: 0rem;
+    }
+  }
+  &__news-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10rem 0;
+
+    @include respond(narrow-phone) {
+      padding: 3rem 0;
+    }
+  }
+
+  &__button {
+    @include big-button-default;
+
+    @include respond(phone) {
+      margin: 0 auto 8rem auto;
+    }
+    @include respond(narrow-phone) {
+      margin: 0 auto 5rem auto;
+    }
+  }
+
+  &__top-shape {
+    @include top-section-shape;
+    z-index: 2;
+
+    @include respond(tab-landscape) {
+      top: 5%;
+    }
+
+    @include respond(tab-portrait) {
+      left: 46%;
+      top: 5%;
+    }
+
+    @include respond(wide-phone) {
+      scale: 0.6;
+      left: 43%;
+      top: -3%;
+    }
+
+    @include respond(phone) {
+      scale: 0.4;
+      left: 38%;
+      top: -9%;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__star-shape {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    z-index: -1;
+
+    @include respond(wide-phone) {
+      scale: 0.4;
+      top: 16%;
+      left: -15%;
+    }
+
+    @include respond(phone) {
+      scale: 0.3;
+      top: 10%;
+      left: -15%;
+    }
+  }
+
+  &__corner-shape {
+    position: absolute;
+    bottom: -2%;
+    right: -2%;
+    transform: rotate(125deg);
+  }
+}

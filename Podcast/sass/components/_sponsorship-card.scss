@@ -1,0 +1,166 @@
+/* DESKTOP CARD */
+
+.sponsorship-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond(tab-landscape) {
+    width: 60rem;
+  }
+
+  @include respond(tab-portrait) {
+    width: 60%;
+  }
+
+  @include respond(narrow-phone) {
+    padding: 3rem 0;
+  }
+
+  &__main-subcard,
+  &__included-subcard {
+    padding: 6rem 4rem 3rem 4rem;
+    border: 2px solid black;
+    border-radius: 0.8rem;
+
+    @include respond(tab-landscape) {
+      padding: 2rem 3rem 2rem 3rem;
+    }
+
+    background-color: var(--clr-white);
+
+    &--colored {
+      background-color: var(--clr-champagne-main);
+      border-color: var(--clr-red-main);
+    }
+  }
+
+  &__main-subcard {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    height: 37.5rem;
+
+    @include respond(tab-landscape) {
+      height: 26rem;
+    }
+
+    &-heading-text-container {
+      h6 {
+        font-size: var(--font-size-large-3);
+        font-weight: 700;
+
+        @include respond(tab-landscape) {
+          font-size: var(--font-size-large-2);
+        }
+      }
+
+      p {
+        font-size: var(--font-size-medium-3);
+        font-weight: 500;
+      }
+    }
+
+    &-description {
+      @include respond(wide-phone) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__included-subcard {
+    height: 31.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include respond(tab-landscape) {
+      height: 23rem;
+    }
+
+    @include respond(phone) {
+      height: auto;
+    }
+
+    p {
+      font-size: var(--font-size-medium-1);
+      color: var(--clr-grey-1);
+      font-weight: 700;
+    }
+
+    ul {
+      list-style-type: circle;
+      li {
+        font-size: var(--font-size-medium-2);
+        font-weight: 500;
+        margin-bottom: 1rem;
+
+        @include respond(phone) {
+          font-size: var(--font-size-medium-1);
+        }
+      }
+    }
+  }
+
+  &__subscribe-btn {
+    @include big-button-default;
+    margin-bottom: 0;
+    margin-right: 2rem;
+    padding: 2rem 3.6rem;
+    font-size: var(--font-size-medium-3);
+  }
+
+  &__btn-price-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-number {
+    font-weight: 700;
+    font-size: var(--font-size-medium-1);
+    color: var(--clr-red-main);
+  }
+
+  &__price-per-month {
+    font-weight: 700;
+    font-size: var(--font-size-medium-3);
+    color: var(--clr-grey-1);
+  }
+
+  &__price-month-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.list-item--bold {
+  font-weight: 700;
+}
+
+/* MOBILE CARD */
+
+.swiper3 {
+  width: 100%;
+  height: 110rem;
+
+  @include respond(tab-landscape) {
+    height: 80rem;
+  }
+
+  @include respond(narrow-phone) {
+    height: auto;
+  }
+}
+
+.swiper3-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: transparent;
+}

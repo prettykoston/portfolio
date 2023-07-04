@@ -1,0 +1,143 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  width: 40%;
+  height: 63.4rem;
+  padding: 1.6rem;
+
+  border: 2px solid black;
+  border-radius: 0.8rem;
+
+  background-color: var(--clr-white);
+
+  @include respond(tab-landscape) {
+    height: auto;
+  }
+
+  @include respond(phone) {
+    padding: 1rem;
+  }
+
+  @include respond(narrow-phone) {
+    height: calc(100% + 5rem);
+  }
+
+  &__img {
+    margin-bottom: 2rem;
+
+    @include respond(wide-phone) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__type {
+    font-weight: 700;
+    color: var(--clr-grey-1);
+    font-size: var(--font-size-medium-3);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-size: var(--font-size-large-3);
+    font-weight: 700;
+    width: 80%;
+    height: 10rem;
+
+    @include respond(tab-landscape) {
+      height: 6rem;
+      line-height: 3rem;
+    }
+
+    @include respond(wide-phone) {
+      height: 5rem;
+      font-size: var(--font-size-medium-1);
+    }
+
+    @include respond(phone) {
+      height: 5rem;
+      font-size: var(--font-size-medium-1);
+    }
+
+    &--colored {
+      color: var(--clr-red-main);
+    }
+  }
+
+  &__description {
+    position: relative;
+    color: var(--clr-grey-1);
+    font-weight: 500;
+    font-size: var(--font-size-medium-3);
+
+    @include respond(phone) {
+      height: 15rem;
+    }
+
+    @include respond(narrow-phone) {
+      height: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1.4rem;
+      left: 0;
+      width: 100%;
+
+      border-bottom: 0.5px solid rgb(77, 77, 77);
+    }
+  }
+
+  &__meta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(wide-phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    @include respond(phone) {
+      gap: 1rem;
+    }
+  }
+
+  &__tags-container {
+    display: flex;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    @include link-default-style;
+
+    @include respond(phone) {
+      gap: 0.2rem;
+    }
+  }
+
+  &__tag {
+    font-size: var(--font-size-small-1);
+    font-weight: 500;
+    color: var(--clr-grey-1);
+
+    padding: 0.6rem 1.2rem;
+
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 0.4rem;
+  }
+
+  &__date {
+    color: var(--clr-grey-1);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &--shadowed {
+    box-shadow: 1rem 1rem 0px 0px black;
+  }
+}

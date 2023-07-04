@@ -1,0 +1,122 @@
+.recent-episode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 2rem;
+  background-color: var(--clr-white);
+  padding: 1.6rem 0 0 1.6rem;
+  border: 2px solid black;
+  border-radius: 1.2rem;
+
+  &--shadow {
+    box-shadow: 1rem 1rem 0 0 rgb(129, 173, 200);
+  }
+
+  &__img {
+    width: 16.6rem;
+    height: 16.6rem;
+    border-radius: 0.8rem;
+  }
+
+  &__description {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__text-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.7rem 0 1.7rem 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 60%;
+      left: 0;
+      width: 90%;
+      border-bottom: 0.5px solid rgb(77, 77, 77);
+    }
+  }
+
+  &__text-number {
+    font-size: var(--font-size-medium-2);
+    font-weight: 700;
+    color: var(--clr-red-main);
+  }
+
+  &__text-name {
+    margin-bottom: 2.5rem;
+
+    font-size: var(--font-size-medium-1);
+    font-weight: 700;
+
+    &--colored {
+      color: var(--clr-red-main);
+    }
+  }
+
+  &__text-description {
+    width: 90%;
+    font-size: var(--font-size-medium-3);
+    color: var(--clr-grey-1);
+    font-weight: 500;
+  }
+
+  &__metas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 1.6rem;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 0.6rem;
+    @include link-default-style;
+
+    a {
+      &:hover {
+        color: var(--clr-blue-2);
+      }
+    }
+  }
+
+  &__tag {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 0.4rem;
+    color: var(--clr-grey-1);
+  }
+
+  &__hosts {
+    display: flex;
+    gap: 1rem;
+
+    p {
+      font-weight: 700;
+      color: var(--clr-grey-1);
+    }
+  }
+
+  &__hosts-avatars-box {
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 10rem;
+
+      transition: all 0.3s;
+
+      &:not(:first-child) {
+        transform: translateX(-1rem);
+      }
+
+      &:hover {
+        scale: 2;
+      }
+    }
+  }
+}

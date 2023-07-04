@@ -1,0 +1,110 @@
+@mixin top-section-shape {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include respond(tab-landscape) {
+    scale: 0.8;
+  }
+
+  @include respond(tab-portrait) {
+    scale: 0.6;
+  }
+}
+
+@mixin link-default-style {
+  a {
+    text-decoration: none;
+    color: var(--clr-grey-1);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--clr-red-main);
+    }
+  }
+}
+
+@mixin big-button-default {
+  display: table;
+
+  margin: 0 auto 14rem auto;
+  border-radius: 0.8rem;
+  padding: 2.3rem 4rem;
+
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  box-shadow: 0.6rem 0.6rem rgba(0, 0, 0, 0.25);
+  font-size: var(--font-size-medium-2);
+  font-family: var(--font-family-default);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    color: var(--clr-red-main);
+    cursor: pointer;
+  }
+}
+
+/* MEDIA QUERY MANAGER
+0-280px:        Narrow screen phone
+280-400px:    Normal Phone 
+400-600px:    Wide Phone
+600 - 900px:  Tablet Portrait Mode
+900 - 1200px: Tablet Landscape Mode
+1200-1800px:  normal styles
+1800px + :    Big Desktops;
+
+ Breakpoint argument choices:
+- wide-phone
+- tab-portrait
+- tab-landscape
+- big-desktop
+
+
+ORDER: Base + Typography > general layout (header, footer, navigation, etc) + grid > page layout > components
+
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == narrow-phone {
+    @media only screen and (max-width: 17.5em) {
+      // < ~ 280px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 25em) {
+      // < ~ 400px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide-phone {
+    @media only screen and (max-width: 37.5em) {
+      // < ~ 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 56.25em) {
+      // < ~ 900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-landscape {
+    @media only screen and (max-width: 75em) {
+      // <  ~ 1200px
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      // >  ~ 1800px
+      @content;
+    }
+  }
+}

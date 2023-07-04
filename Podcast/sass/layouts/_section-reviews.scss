@@ -1,0 +1,61 @@
+.section-reviews {
+  background-color: var(--clr-blue-1);
+  position: relative;
+  &__heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__heading {
+    padding: 14rem 0 10rem 0;
+    position: relative;
+
+    @include respond(phone) {
+      padding: 8rem 0 6rem 0;
+    }
+  }
+
+  &__sparkle-shape {
+    position: absolute;
+    margin-bottom: 8rem;
+    margin-left: -75rem;
+    z-index: 2;
+
+    @include respond(tab-portrait) {
+      scale: 0.75;
+      margin-bottom: 7rem;
+      margin-left: -58rem;
+    }
+
+    @include respond(phone) {
+      scale: 0.45;
+      margin-bottom: 9rem;
+      margin-left: -46rem;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.3;
+    }
+  }
+
+  &__top-shape {
+    @include top-section-shape;
+    @include respond(tab-portrait) {
+      left: 45%;
+      top: -10%;
+    }
+
+    @include respond(phone) {
+      scale: 0.4;
+      left: 33%;
+      top: -38%;
+    }
+
+    @include respond(narrow-phone) {
+      scale: 0.25;
+      left: 16%;
+      top: -73%;
+    }
+  }
+}
