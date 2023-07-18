@@ -1,0 +1,194 @@
+.presentation-wrapper {
+  padding: 0 10rem 0 12rem;
+
+  @include respond(tab-landscape) {
+    padding: 0 2rem 0 5.5rem;
+  }
+  @include respond(tab-landscape) {
+    padding: 0 2rem;
+  }
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 6.1rem;
+  column-gap: 3rem;
+
+  @include respond(tab-landscape) {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: repeat(5, min-content);
+    row-gap: 2rem;
+    column-gap: 0;
+  }
+
+  @include respond(wide-phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+  }
+
+  h2 {
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-left: 2.5rem;
+    color: var(--clr-grey-dark);
+    font-size: var(--font-size-large-3);
+    font-weight: 400;
+    white-space: nowrap;
+
+    @include respond(tab-landscape) {
+      grid-column: 1 / -1;
+      font-size: var(--font-size-large-4);
+    }
+
+    @include respond(wide-phone) {
+      justify-self: center;
+      padding: 0 2rem;
+      font-size: var(--font-size-medium-3);
+      width: 90%;
+    }
+
+    &::before {
+      @include heading-square-pseudo;
+      top: 1rem;
+      left: 0;
+
+      @include respond(tab-landscape) {
+        left: -.5rem;
+      }
+
+      @include respond(wide-phone) {
+        top: 0.5rem;
+      }
+    }
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: var(--font-size-medium-4);
+    font-weight: 300;
+
+    @include respond(tab-landscape) {
+      font-size: var(--font-size-small-1);
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      width: 90%;
+    }
+
+    @include respond(wide-phone) {
+      justify-self: center;
+      padding: 0 2rem;
+      font-size: var(--font-size-small-1);
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__left-corner-shape {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: self-end;
+
+    @include respond(wide-phone) {
+      display: none;
+    }
+  }
+
+  &__numbers {
+    grid-column: 2 / -1;
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    column-gap: 3rem;
+    row-gap: 5rem;
+    color: var(--clr-grey-dark-2, rgba(78, 78, 78, 1));
+    align-self: end;
+
+    @include respond(tab-landscape) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, max-content);
+      row-gap: 4rem;
+    }
+
+    @include respond(wide-phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      grid-column: 1 / -1;
+      grid-row: 3 / -1;
+    }
+  }
+
+  &__number-card {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: var(--font-size-small-1);
+      font-weight: 400;
+
+      @include respond(wide-phone) {
+        font-size: var(--font-size-small-4);
+      }
+
+      &.text-large {
+        font-size: var(--font-size-large-2);
+
+        @include respond(wide-phone) {
+          font-size: var(--font-size-large-6);
+        }
+      }
+    }
+
+    div {
+      position: relative;
+      margin-bottom: 4rem;
+
+      @include respond(tab-landscape) {
+        margin-bottom: 2rem;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid var(--clr-grey-dark-2, rgba(78, 78, 78, 1));
+        bottom: -2rem;
+        left: 0;
+
+        @include respond(tab-landscape) {
+          bottom: -1rem;
+        }
+      }
+    }
+
+    p {
+      font-size: var(--font-size-small-1);
+      font-weight: 300;
+
+      @include respond(wide-phone) {
+        padding: 0;
+        font-size: var(--font-size-small-4);
+      }
+    }
+  }
+
+  &__button {
+    color: var(--clr-grey-dark);
+    font-weight: 400;
+    border: 1px solid var(--clr-red-default, rgba(255, 75, 0, 1));
+    align-self: self-start;
+    width: 30%;
+
+    @include respond(tab-landscape) {
+      width: 80%;
+    }
+
+    @include respond(wide-phone) {
+      width: 100%;
+    }
+  }
+}

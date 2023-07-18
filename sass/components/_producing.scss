@@ -1,0 +1,106 @@
+.producing {
+  height: 80vw;
+  width: 100%;
+  background-image: url(/img/section-producing/producing-background.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @include respond(tab-landscape) {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  @include respond(wide-phone) {
+    height: 185vw;
+    background-image: url(/img/section-producing/producing-background-mobile.png);
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  h4 {
+    font-size: var(--font-size-large-3);
+    color: var(--clr-white);
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+
+    @include respond(tab-landscape) {
+      font-size: 5.6vw;
+      margin-top: 12vw;
+    }
+
+    @include respond(wide-phone) {
+      margin-top: 0;
+
+      text-align: center;
+      font-size: var(--font-size-large-4);
+    }
+
+    &::before {
+      @include heading-square-pseudo;
+      top: 2rem;
+      left: -3.5rem;
+
+      @include respond(tab-landscape) {
+        height: 1rem;
+        width: 1rem;
+        top: 1rem;
+        left: -2.5rem;
+      }
+    }
+  }
+
+  p {
+    color: var(--clr-white);
+    text-align: center;
+    width: 40%;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: var(--font-size-medium-3);
+
+    @include respond(tab-landscape) {
+      font-size: 2.4vw;
+      width: 55%;
+    }
+
+    @include respond(wide-phone) {
+      text-align: center;
+      font-size: var(--font-size-medium-5);
+      width: 100%;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.producing .producing__buttons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @include respond(tab-landscape) {
+    flex-direction: column;
+  }
+}
+
+.producing .producing__buttons > button {
+  padding: 1.5rem 3.6rem;
+
+  @include respond(tab-landscape) {
+    font-size: 2vw;
+    width: 100%;
+  }
+
+  @include respond(wide-phone) {
+    font-size: var(--font-size-small-3);
+    text-align: center;
+    padding: 1.5rem 2.4rem;
+  }
+}

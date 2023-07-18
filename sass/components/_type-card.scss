@@ -1,0 +1,67 @@
+.type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 50%;
+  height: 69rem;
+  padding: 0 7rem 7rem 7rem;
+
+  @include respond(tab-landscape) {
+    flex: 1 1 48rem;
+    padding: 0 8.8rem 5rem 8.8rem;
+  }
+
+  @include respond(wide-phone) {
+    padding: 0 1rem 2.1rem 1rem;
+  }
+
+  &__buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    width: 100%;
+  }
+
+  h4 {
+    text-align: center;
+    margin-bottom: 2.9rem;
+  }
+
+  &--inner-light,
+  &--outer-light {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  &--inner-light {
+    background-image: url(/img/section-lighting-cards/inner-light-card-background.png);
+  }
+
+  &--outer-light {
+    background-image: url(/img/section-lighting-cards/outer-light-card-background.png);
+
+    .type-card__buttons-container {
+      @include respond(wide-phone) {
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  }
+
+  &__button--house {
+    @include respond(wide-phone) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 3;
+    }
+  }
+
+  &__button--facade {
+    @include respond(wide-phone) {
+      grid-column: 1 / -1;
+      grid-row: 4 / 4;
+    }
+  }
+}

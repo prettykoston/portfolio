@@ -1,0 +1,16 @@
+.section-lighting-types {
+  margin-bottom: 3rem;
+
+  @include respond(tab-landscape) {
+    margin-bottom: 2rem;
+  }
+  &__cards-container {
+    display: flex;
+    gap: 3rem;
+
+    @include respond(tab-landscape) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

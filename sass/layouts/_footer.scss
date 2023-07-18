@@ -1,0 +1,140 @@
+.footer {
+  background-color: var(--clr-grey-dark-2);
+
+  padding: 6rem 12rem 3.5rem 12rem;
+
+  @include respond(tab-landscape) {
+    padding: 6rem 2rem 3.5rem 2rem;
+  }
+}
+
+.footer__row-1,
+.footer__row-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 3rem;
+  margin-bottom: 15rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    li {
+      color: var(--clr-grey-default);
+    }
+
+    li:nth-child(1) {
+      font-size: var(--font-size-medium-4);
+      color: var(--clr-white);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+  }
+}
+
+/* FIRST ROW STYLES */
+
+.footer__row-1 {
+  @include respond(tab-landscape) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 6rem;
+    column-gap: 6rem;
+    margin-bottom: 12rem;
+  }
+
+  @include respond(wide-phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+    row-gap: 5rem;
+  }
+}
+
+/* SECOND ROW STYLES */
+
+.footer__row-2 {
+  position: relative;
+  margin-bottom: 10rem;
+
+  @include respond(tab-landscape) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 6rem;
+    column-gap: 6rem;
+    margin-bottom: 12rem;
+  }
+
+  @include respond(wide-phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+    row-gap: 5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    top: -4rem;
+
+    @include respond(wide-phone) {
+      top: -6rem;
+    }
+  }
+}
+
+.footer__row-2 > ul:nth-child(1) {
+  gap: 1.3rem;
+
+  @include respond(tab-landscape) {
+    grid-row: 1 / -1;
+  }
+
+  li {
+    color: var(--clr-white);
+    font-size: var(--font-size-medium-4);
+  }
+
+  li > a {
+    color: var(--clr-white);
+  }
+
+  li:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+
+  li:nth-child(5) {
+    margin-bottom: 1.7rem;
+  }
+
+  li:nth-child(5) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.footer__copyright {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    top: -2.5rem;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--clr-white);
+
+    @include respond(wide-phone) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

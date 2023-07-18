@@ -1,0 +1,11 @@
+.section-job {
+  margin-bottom: 18rem;
+
+  @include respond(tab-landscape) {
+    margin-bottom: 12rem;
+  }
+
+  @include respond(wide-phone) {
+    margin-bottom: 7rem;
+  }
+}

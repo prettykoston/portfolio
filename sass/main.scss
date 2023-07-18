@@ -1,0 +1,34 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+@import "layouts/header";
+@import "layouts/section-lighting-types";
+@import "layouts/section-presentation";
+@import "layouts/section-producing";
+@import "layouts/section-projects-slider";
+@import "layouts/section-job";
+@import "layouts/section-news";
+@import "layouts/footer";
+
+@import "components/logo";
+@import "components/navigation";
+@import "components/phone";
+@import "components/button";
+@import "components/type-card";
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/modules/navigation.scss";
+@import "components/slider-catalogue";
+@import "components/slider-projects";
+@import "components/presentation";
+@import "components/producing";
+@import "components/job-big-grid";
+@import "components/news";
+@import "components/header-dropdown";
+
+
+@import "pages/best-goods-contest";

@@ -1,0 +1,19 @@
+{
+  "name": "best",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "watch:sass": "node-sass sass/main.scss styles/style.css -w"
+  },
+  "devDependencies": {
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "swiper": "^10.0.4"
+  }
+}

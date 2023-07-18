@@ -1,0 +1,32 @@
+.phone {
+  display: flex;
+  gap: 1.4rem;
+  justify-content: space-between;
+
+  @include respond(tab-landscape) {
+    margin-left: auto;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(wide-phone) {
+      display: none;
+    }
+  }
+
+  img {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+
+.phone-logo {
+  display: none;
+
+  @include respond(wide-phone) {
+    display: block;
+  }
+}

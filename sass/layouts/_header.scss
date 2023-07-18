@@ -1,0 +1,69 @@
+.header {
+  height: 70rem;
+  background-image: url(/img/header/header-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 3rem;
+
+  @include respond(tab-landscape) {
+    margin-bottom: 2rem;
+    height: 48rem;
+  }
+
+  &__nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between;
+    padding: 3rem;
+    margin-bottom: 18rem;
+
+    @include respond(tab-landscape) {
+      padding: 2rem;
+      gap: 2rem;
+      margin-bottom: 13.2rem;
+    }
+
+    @include respond(wide-phone) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+  }
+
+  &__description-text {
+    width: 30%;
+    margin: 0 auto 3rem auto;
+
+    @include respond(tab-landscape) {
+      width: 60%;
+      margin: 0 auto 2rem auto;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(wide-phone) {
+      padding: 0 1.7rem;
+    }
+  }
+
+  &__button {
+    width: 20%;
+
+    @include respond(tab-landscape) {
+      width: 40%;
+    }
+
+    @include respond(wide-phone) {
+      width: 100%;
+    }
+  }
+}

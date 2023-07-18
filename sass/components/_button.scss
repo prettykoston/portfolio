@@ -1,0 +1,13 @@
+.button-default {
+  background-color: transparent;
+  color: var(--clr-white);
+  font-weight: 100;
+  padding: 1.5rem 0;
+  border: 1px solid #fff;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--clr-red-default);
+  }
+}

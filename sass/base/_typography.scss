@@ -1,0 +1,104 @@
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: var(--font-size-default);
+  line-height: normal;
+  color: var(--clr-grey-dark);
+  cursor: default;
+}
+
+.heading {
+  h1 {
+    font-size: var(--font-size-large-1);
+    font-weight: 400;
+
+    @include respond(tab-landscape) {
+      font-size: var(--font-size-large-4);
+    }
+  }
+}
+
+.button-default {
+  font-size: var(--font-size-medium-4);
+
+  @include respond(tab-landscape) {
+    font-size: var(--font-size-medium-5);
+  }
+}
+
+.header {
+  &__heading {
+    text-align: center;
+    color: var(--clr-white);
+  }
+
+  &__description-text {
+    color: var(--clr-white);
+    font-weight: 300;
+    text-align: center;
+
+    @include respond(tab-landscape) {
+      font-size: var(--font-size-small-1);
+    }
+  }
+}
+
+.logo {
+  color: var(--clr-white);
+
+  span:nth-child(2) {
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-size: var(--font-size-small-5);
+  }
+
+  span:nth-child(3) {
+    font-weight: 300;
+    font-size: var(--font-size-small-4);
+
+    @include respond(tab-landscape) {
+      font-size: var(--font-size-small-5);
+    }
+  }
+}
+
+.navigation {
+  font-size: var(--font-size-medium-5);
+  a {
+    white-space: nowrap;
+
+    &:link {
+      color: var(--clr-white);
+    }
+
+    &:hover {
+      color: var(--clr-red-default);
+    }
+  }
+}
+
+.phone {
+  font-size: var(--font-size-medium-5);
+
+  @include respond(tab-landscape) {
+    font-size: var(--font-size-small-1);
+  }
+
+  a {
+    &:link {
+      color: var(--clr-white);
+    }
+
+    &:hover {
+      color: var(--clr-red-default);
+    }
+  }
+}
+
+.type-card {
+  h4 {
+    font-size: var(--font-size-large-5);
+    font-weight: 300;
+    color: var(--clr-white);
+  }
+}

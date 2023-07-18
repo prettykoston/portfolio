@@ -1,0 +1,61 @@
+.section-projects-slider {
+  margin-bottom: 18rem;
+
+  @include respond(tab-landscape) {
+    margin-bottom: 12rem;
+  }
+
+  @include respond(wide-phone) {
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    position: relative;
+    font-size: var(--font-size-large-3);
+    font-weight: 400;
+    width: fit-content;
+    margin: 0 auto 4rem auto;
+
+    @include respond(tab-landscape) {
+      font-size: var(--font-size-large-4);
+      margin: 0 auto 2rem auto;
+    }
+
+    @include respond(wide-phone) {
+      font-size: var(--font-size-medium-3);
+    }
+
+    &::before {
+      @include heading-square-pseudo;
+      top: 2rem;
+      left: -3rem;
+
+      @include respond(tab-landscape) {
+        top: 1rem;
+        left: -3rem;
+      }
+
+      @include respond(wide-phone) {
+        top: 0.5rem;
+        left: -2rem;
+      }
+    }
+  }
+}
+
+.section-projects-slider > .section-projects-slider__button {
+  color: var(--clr-black);
+  border-color: var(--clr-red-default);
+  width: 20%;
+  font-weight: 400;
+  display: block;
+  margin: 0 auto;
+
+  @include respond(tab-landscape) {
+    width: 40%;
+  }
+
+  @include respond(wide-phone) {
+    width: 90%;
+  }
+}

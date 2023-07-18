@@ -1,0 +1,69 @@
+/* MEDIA QUERY MANAGER
+0    - 320px:  Phone
+320  - 380px:  Wide phone
+380  - 580px:  Tablet Portrait Mode
+580  - 768px:  Tablet Landscape Mode
+768  - 1260px: Small Desktop;
+1260 - 1720px: Medium Desktop;
+1720px+      : Wide Desktop;
+
+ Breakpoint argument choices:
+- phone
+- wide-phone
+- tab-portrait
+- tab-landscape
+- desktop-small
+- desktop-medium
+- desktop-wide
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 20em) {
+      // < 320px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide-phone {
+    @media only screen and (max-width: 23.75em) {
+      // < 380px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 36.25em) {
+      // < 580px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    @media only screen and (max-width: 48em) {
+      // < 768px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-small {
+    @media only screen and (max-width: 78.75em) {
+      // < 1260px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-wide {
+    @media only screen and (min-width: 90em) {
+      // > 1440px
+      @content;
+    }
+  }
+}
+
+@mixin heading-square-pseudo {
+  content: "";
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url(/img/shapes/heading-square-shape.svg);
+}

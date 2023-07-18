@@ -1,0 +1,47 @@
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(desktop-wide) {
+    font-size: 0.8vw;
+  }
+
+  @include respond(desktop-small) {
+    font-size: 0.8vw;
+  }
+
+  @include respond(tab-landscape) {
+    font-size: 62.5%;
+  }
+
+  @include respond(tab-portrait) {
+    font-size: 1.7vw;
+  }
+
+  @include respond(wide-phone) {
+    font-size: 62.5%;
+  }
+  @include respond(phone) {
+    font-size: 3.1vw;
+  }
+}
+
+.main-wrapper {
+  padding: 0 3rem;
+  /* max-width: 144rem;
+  margin: 0 auto; */
+  @include respond(tab-landscape) {
+    padding: 0 2rem;
+  }
+
+  @include respond(wide-phone) {
+    padding: 0 1rem;
+  }
+}
+
+/* * {
+  border: 2px solid red;
+} */
+
+.visibility-hidden {
+  visibility: hidden;
+}
